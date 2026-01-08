@@ -1,14 +1,15 @@
 import math
-def calculate_trigonometric_values(angle_in_degrees):
-    angle_in_radians = math.radians(angle_in_degrees)
-    sin_value = math.sin(angle_in_radians)
-    cos_value = math.cos(angle_in_radians)
-    tan_value = math.tan(angle_in_radians)
-    return sin_value, cos_value, tan_value
-angle = float(input("Enter an angle in degrees: "))
-sin_val, cos_val, tan_val = calculate_trigonometric_values(angle)
 
-print(f"For angle {angle}°:")
-print(f"sin({angle}) = {sin_val:.4f}")
-print(f"cos({angle}) = {cos_val:.4f}")
-print(f"tan({angle}) = {tan_val:.4f}")
+def calculate_values(num):
+    sqrt = math.sqrt(num)
+    log = math.log(num)
+    exp = math.exp(num)
+    return sqrt, log, exp
+
+num = float(input("Enter a number: "))
+sqrt_val, log_val, exp_val = calculate_values(num)
+
+print(f"For number {num}:")
+print(f"Square root: {sqrt_val:.4f}")
+print(f"Natural log: {log_val:.4f}")
+print(f"Exponential: {exp_val:.4f}")
